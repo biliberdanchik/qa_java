@@ -5,18 +5,20 @@ import java.util.List;
 public class Lion {
 
     boolean hasMane;
+    Feline feline;  //Добавил поле, что бы убрать зависимость
 
-    public Lion(String sex) throws Exception {
+    public Lion(Feline feline, String sex) throws Exception { //Добавил поле в конструктор
+        this.feline = feline;
         if ("Самец".equals(sex)) {
-            hasMane = true;
+            this.hasMane = true;
         } else if ("Самка".equals(sex)) {
-            hasMane = false;
+            this.hasMane = false;
         } else {
-            throw new Exception("Используйте допустимые значения пола животного - самей или самка");
+            throw new Exception("Используйте допустимые значения пола животного - самец или самка");
         }
     }
 
-    Feline feline = new Feline();
+    //Feline feline = new Feline();  Убрал зависимость в поле класса
 
     public int getKittens() {
         return feline.getKittens();
