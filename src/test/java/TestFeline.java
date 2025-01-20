@@ -23,13 +23,14 @@ public class TestFeline {
     @Test
     public void checkFamilyFeline() {
         String actualFamily = feline.getFamily();
-        assertEquals("Кошачьи", actualFamily);
+        assertEquals("Неверное семейство для кошачьих", "Кошачьи", actualFamily);
     }
 
     @Test
     public void getKittensWithParam() {
-        int actualKittensCount = feline.getKittens(2);
-        assertEquals(2, actualKittensCount);
+        int kittensCount = 2;
+        int actualKittensCount = feline.getKittens(kittensCount);
+        assertEquals("Число котят не соответствует ожидаемому",kittensCount, actualKittensCount);
     }
 
     @Test

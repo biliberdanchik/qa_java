@@ -32,7 +32,7 @@ public class TestLionParam {
     public void checkLionConstructor() throws Exception {
         Feline feline = Mockito.mock(Feline.class);
         Lion lion = new Lion(feline, sex);
-        assertEquals(expected, lion.doesHaveMane());
+        assertEquals("Неверный признак наличия гривы", expected, lion.doesHaveMane());
 
     }
 
