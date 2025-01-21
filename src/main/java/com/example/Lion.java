@@ -18,8 +18,6 @@ public class Lion {
         }
     }
 
-    //Feline feline = new Feline();  Убрал зависимость в поле класса
-
     public int getKittens() {
         return feline.getKittens();
     }
