@@ -33,9 +33,7 @@ public class TestLion {
 
     @Test
     public void checkThrowsExceptionLionConstructor() throws Exception {
-        Lion lion = new Lion(feline, "Небинарная личность");
-        InterruptedException exception = assertThrows(InterruptedException.class, () -> lion.getFood());
-        assertEquals("Используйте допустимые значения пола животного - самец или самка", exception.getMessage());
+        Exception exception = assertThrows(Exception.class, () -> new Lion(feline, "Небинарная личность"));
+        assertEquals("Тест исключения не соответствует ожидаемому","Используйте допустимые значения пола животного - самец или самка", exception.getMessage());
     }
-
 }

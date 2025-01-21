@@ -10,7 +10,6 @@ import static org.junit.Assert.assertEquals;
 @RunWith(MockitoJUnitRunner.class)
 public class TestFeline {
 
-
     @Spy
     Feline feline;
 
@@ -38,6 +37,4 @@ public class TestFeline {
         feline.getKittens();
         Mockito.verify(feline, Mockito.times(1)).getKittens(1);
     }
-
-
 }

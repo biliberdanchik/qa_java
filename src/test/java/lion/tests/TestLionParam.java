@@ -33,7 +33,5 @@ public class TestLionParam {
         Feline feline = Mockito.mock(Feline.class);
         Lion lion = new Lion(feline, sex);
         assertEquals("Неверный признак наличия гривы", expected, lion.doesHaveMane());
-
     }
-
 }

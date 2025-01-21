@@ -17,21 +17,21 @@ public class TestLionAlex {
     Feline feline;
 
     @Test
-    public void checkGetFriends() {
+    public void checkGetFriends() throws Exception {
         LionAlex lion = new LionAlex(feline);
         List<String> actual = lion.getFriends();
         assertEquals("Список друзей неверный", List.of("зебра Марти", "бегемотиха Глории", "жираф Мелман"), actual);
     }
 
     @Test
-    public void checkGetPlaceOfLiving() {
+    public void checkGetPlaceOfLiving() throws Exception {
         LionAlex lion = new LionAlex(feline);
         String actual = lion.getPlaceOfLiving();
         assertEquals("Место жительство неверное", "Нью-Йоркский зоопарк", actual);
     }
 
     @Test
-    public void checkGetKittensAlex() {
+    public void checkGetKittensAlex() throws Exception {
         LionAlex lionAlex = new LionAlex(feline);
         lionAlex.getKittens();
         Mockito.verify(feline, Mockito.times(1)).getKittens(0);
