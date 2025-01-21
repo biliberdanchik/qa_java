@@ -32,7 +32,7 @@ public class TestLion {
     }
 
     @Test
-    public void checkThrowsExceptionLionConstructor() throws Exception {
+    public void checkThrowsExceptionLionConstructor() {
         Exception exception = assertThrows(Exception.class, () -> new Lion(feline, "Небинарная личность"));
         assertEquals("Тест исключения не соответствует ожидаемому","Используйте допустимые значения пола животного - самец или самка", exception.getMessage());
     }
